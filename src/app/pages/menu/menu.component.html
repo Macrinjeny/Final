@@ -1,0 +1,128 @@
+<div class="container">
+    <nav>
+        <div class="container">
+            <div class="search-bar">
+                <input placeholder="search for snacks">
+
+                <!-- <i class='bx bx-chevron-left' id="back"></i> -->
+                <!-- <i class='bx bx-search' id="search"></i> -->
+                 
+            </div>
+            <!-- Add this link to the cart page -->
+            <div [ngClass]="{ 'white-screen': !isScreenBelow520px }">
+                <div class="cart-icon" *ngIf="isScreenBelow520px" (click)="navigateToCart()">
+                    <i class='bx bxs-cart' ></i>
+                </div>
+            </div>
+        </div>
+    
+        <div class="button">
+            <a class="btn" [routerLink]="">Non-veg </a>
+            <a class="vegbtn" [routerLink]="">Veg </a>
+            <br><br><br>
+            <h1>Combo Packs</h1>
+        </div>
+    </nav>
+
+<div class="snacks">
+    <div class="menu-item" *ngFor = "let data of sampleArr; let i = index;">
+        <div class="menu-details">
+            <h1>{{data.name}}</h1>
+            <p><strong>&#8377;</strong>{{data.price}}</p>
+        </div>
+        <div class="menu-image">
+            <img src="{{data.image}}" alt="">
+              <!-- <div class="addbtn"> -->
+            <a class="addbtn" (click)="toggleAddForm(data)">ADD</a>
+          <!-- </div> -->
+          <div class="addbtn" *ngIf="data.showAddForm">
+            <button class="minus" (click)="handleMinus(data)">-</button>
+            <input type="number" class="num" [(ngModel)]="data.value" />
+            <button class="plus" (click)="handlePlus(data)">+</button>
+          </div>
+        </div>
+        </div>
+        
+        <!-- <h2>Additional add on</h2>
+        <i class='bx bxs-chevron-up' ></i>
+        <div class="additional">
+            <h2>Additional add on</h2>
+            <i class='bx bxs-chevron-up' ></i> 
+        <div class="add-item" *ngFor = "let add of addArr; let i = index;">
+            <div class="add-details">
+                <h1>{{add.name}}</h1>
+                <p><strong>&#8377;</strong>{{add.price}}</p>
+            </div>
+            <div class="add-image">
+                <img src="{{add.image}}" alt="">
+            </div>
+        </div> -->
+
+        <!-- <h2>Additional add on</h2>
+        <i class='bx bxs-chevron-up'></i>
+        <div class="additional" *ngIf="showAdditional">
+            <div class="add-slider">
+                <div class="add-item" *ngFor="let add of addArr; let i = index;">
+                    <div class="add-details">
+                        <h1>{{add.name}}</h1>
+                        <p><strong>&#8377;</strong>{{add.price}}</p>
+                    </div>
+                    <div class="add-image">
+                        <img src="{{add.image}}" alt="">
+                    </div>
+                </div>
+             </div>
+        </div> -->
+
+        <!-- Additional Add-On Carousel
+        <div class="additional-carousel" *ngIf="showAdditional">
+            <h2>Additional add on</h2>
+            <i class='bx bxs-chevron-up' (click)="toggleAdditional()"></i>
+            <ngx-slick-carousel class="carousel" [config]="carouselConfig">
+            <div class="add-item" *ngFor="let add of addArr">
+                <div class="add-details">
+                    <h1>{{ add.name }}</h1>
+                    <p><strong>&#8377;</strong>{{ add.price }}</p>
+                </div>
+                <div class="add-image">
+                    <img src="{{ add.image }}" alt="">
+                </div>
+            </div>
+             </ngx-slick-carousel>
+        </div> -->
+
+        <!-- Toggle button for Additional Array -->
+        <!-- <div class="additional-header" (click)="toggleAdditional()">
+            <h2>Additional add on</h2>
+            <i class='bx bxs-chevron-up' [class.closed]="!showAdditional"></i>
+        
+        
+        <div class="additional" *ngIf="showAdditional">
+            <div class="add-slider">
+                <div class="add-item" *ngFor="let add of addArr; let i = index;">
+                    <div class="add-details">
+                        <h1>{{ add.name }}</h1>
+                        <p><strong>&#8377;</strong>{{ add.price }}</p>
+                    </div>
+                    <div class="add-image">
+                        <img src="{{ add.image }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+</div>
+
+
+
+
+
+
+
+
+    
+
+
+
+

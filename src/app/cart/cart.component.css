@@ -1,0 +1,196 @@
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  width: 100%;
+  margin:0 auto;
+}
+
+
+header {
+  display: flex;
+  width: 97%;
+  padding: 11px;
+  align-items: center;
+  box-shadow: 0 1rem 1rem rgba(0,0,0,.1);
+  border-radius: 19px;
+  margin-right: 0%;
+}
+
+
+header i {
+  font-size: 39px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-left: 150px;
+}
+
+.cart-details{
+  box-shadow: 0 1rem 1rem rgba(0,0,0,.1);
+  width: 85%;
+  margin-left: 35px;
+}
+.cart-item{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed black;
+  width: 97%;
+  /* padding: 5px; */
+}
+.cart-item h1{
+  margin-left: 20px;
+  font-size: 28px;
+}
+.cart-item p{
+  margin-right: 20px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+.wrapper {
+
+  color: #F33A6A;
+  background-color: #FFF;
+  padding: 5px 5px;
+  border-radius: 9px;
+  cursor: pointer; 
+  box-shadow: 0 1rem 1rem rgba(0,0,0,.1);
+  padding-top: 5px;
+  margin-top: 20px;
+  position: absolute;
+  margin-left: 180px; 
+  width: 129px;
+  text-align: center;
+}
+
+.plusminus {
+  width: 20%;
+  background: white;
+  border: none;
+  font-size: 29px;
+  color: #F33A6A;
+  padding-left: 1px;
+}
+
+.num {
+  height: 100%;
+  width: 39%;
+  border: none;
+  font-size: 30px;
+  color: #F33A6A;
+  padding-left: 25px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+} 
+@media screen and (min-width: 520px){
+  .carts{
+      display: none;
+  }
+}
+
+.add{
+  display: flex;
+}
+.add p{
+   font-size: 15px;
+   margin-left: 20px;
+}
+.add i{
+    margin-left: 300px;
+    margin-top: 23px;
+    font-size: 25px;
+}
+
+.bx{
+  color: #F33A6A;
+  margin-right: 30px;
+}
+
+.cart{
+  background-color: #1EAF78;
+}
+
+
+/* Add styles for the UPI Payment footer bar */
+.footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #fff;
+  /* padding: 5px 5px; */
+  height: 150px;
+  margin-top: 78px;
+  padding-top: 5px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+/* Styling for the heading */
+.upi-heading {
+  width: 216px;
+  /* height: 59px; */
+  top: 752px;
+  left: 28px;
+  /* padding-bottom: 60px; */
+  gap: 10px;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+/* Styling for the UPI Payment footer bar */
+.upi-bar {
+  width: 354px;
+  height: 72x;
+  top: 838px;
+  left: 23px;
+  padding: 4px 6px;
+  border-radius: 69px;
+  background: #1EAF78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #FFF;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.upi-bar p{
+  margin-right: 120px;
+}
+
+.icon-circle {
+  background-color: #FFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.icon-circle i#forward {
+  font-size: 25px;
+  color: #1EAF78;
+}
+
+
+header i{
+  color: #000;
+}

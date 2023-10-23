@@ -1,0 +1,58 @@
+<div class="carts">
+  <div class="cart-page" >
+    <header>
+      <i class="bx bx-chevron-left" (click)="navigateBack()"></i>
+      <h1>CART</h1>
+    </header>
+  </div>
+  <br>
+  <br>
+  <br>
+ 
+  <div class="cart-details">
+  <!-- <div class="cart-item" *ngFor = "let arr of cartArr;;">
+    <h1>{{arr.name}}</h1>
+
+
+  <div class="wrapper">
+    <button class="plusminus minus" (click)="handleMinus(arr)">-</button>
+    <input type="number" class="num" [(ngModel)]="arr.value"/>
+    <button class="plusminus plus">+</button>
+  </div> 
+  
+    <p><strong>&#8377;</strong>{{arr.price}}</p>
+  </div>
+  </div> -->
+    <div class="cart-item" *ngFor="let arr of cartArr;">
+      <h1>{{ arr.name }}</h1>
+
+      <div class="wrapper">
+        <button class="plusminus minus" (click)="handleMinus(arr)">-</button>
+        <input type="number" class="num" [(ngModel)]="arr.value" (ngModelChange)="handleValueChange(arr)"/>
+        <button class="plusminus plus" (click)="handlePlus(arr)">+</button>
+      </div>
+
+      <p><strong>&#8377;</strong>{{ arr.price}}</p>
+    </div>
+
+    <div class="add">
+      <p>Add more items<p>
+      <i class='bx bx-plus-circle'></i>
+    </div>
+  </div>
+
+
+  <!-- UPI Payment footer bar -->
+  <div class="footer">
+    <h2 class="upi-heading">UPI Payment</h2>
+
+    <div class="upi-bar">
+      <div class="icon-circle">
+        <i class="fas fa-angle-double-right" id="forward"></i>
+      </div>
+      <p>Slide to Pay | ₹50</p>
+    </div>
+  </div>
+</div>
+
+
